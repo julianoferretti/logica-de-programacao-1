@@ -14,14 +14,13 @@
         return imc;
     };
 
-    // var imc = calculaImc;
     alert("Bem vindo a calculadora de IMC");
 
     var pessoa = prompt("Me diga o seu nome!");
     var peso = prompt(pessoa + ", me diga o seu peso!");
     var altura = prompt(pessoa + ", agora me gida sua altura!");
 
-    mostra("Bem vindo" + pessoa + "!");
+    mostra("Bem vindo " + pessoa + "!");
     mostra("Vamos agora calcular o seu IMC através das informações coletadas anteriormente.");
     pulaLinha();
 
@@ -32,12 +31,39 @@
     mostra("Calculando...");
     pulaLinha();
 
+    var imc = calculaImc(peso, altura);
+
     mostra("Seu IMC é " + imc);
 
-    if (imc >= 17) {
-        document.write("Você está muito abaixo do peso.");
-    } else if (imc >= 17 && imc <= 18.49) {
-        document.write("teste");
+    if (imc <= 14.5) {
+        document.write("Você está na categoria de desnutrição, procure um médico urgente!");
+    } else if (imc > 14.5 && imc <= 20) {
+        document.write("Você está abaixo do peso!");
+    } else if (imc > 20 && imc <= 24.99) {
+        document.write("Parabéns, você está com um peso ideal!");
+    } else if (imc > 24.99 && imc <= 29.99) {
+        document.write("Você está com sobre peso, preste atenção em sua alimentação!");
+    } else if (imc > 29.99 && imc <= 39.99) {
+        document.write("Obesidade!");
+    } else {
+        document.write("Obesidade Morbida!");
+    }
 
-    };
+    // guarda informações em localStorage no browser
+    var dados = {
+        nome: pessoa,
+        peso: peso,
+        altura: altura,
+        imc: imc
+    }
+
+    // imprime as informações na tela
+    localStorage.setItem(pessoa, JSON.stringify(dados));
+    pulaLinha();
+    pulaLinha();
+
+    for (var i = 0; i < localStorage.length; i++) {
+        var item = JSON.parse(localStorage[localStorage.key(i)]);
+        mostra("Nome: " + item.nome + "<p> Peso: " + item.peso + "<hr>");
+    }
 </script>
