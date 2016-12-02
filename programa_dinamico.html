@@ -1,0 +1,35 @@
+<meta charset="utf-8">
+
+<script>
+    var idadeAndre = 32
+    var idadeCezar = 23
+    var idadeJuliano = 22
+
+    document.write("André tem " + idadeAndre + " anos de idade.");
+    document.write("<br>");
+    document.write("Cezar tem " + idadeCezar + " anos de idade.");
+    document.write("<br>");
+    document.write("Juliano tem " + idadeJuliano + " anos de idade.");
+    document.write("<br>");
+    document.write("<br>");
+
+    var mediaIdades = (idadeAndre + idadeCezar + idadeJuliano) / 3
+
+    document.write("Então a médiia de idade deles é de " + Math.round(mediaIdades) + " anos.");
+    document.write("<br>");
+    document.write("<br>");
+
+    var ano = 2016
+
+    document.write("Se André tem " + idadeAndre + " anos, então ele nasceu em " + (ano - idadeAndre));
+    document.write("<br>");
+    document.write("Se Cezar tem " + idadeCezar + " anos, então ele nasceu em " + (ano - idadeCezar));
+    document.write("<br>");
+    document.write("Se Juliano tem " + idadeJuliano + " anos, então ele nasceu em " + (ano - idadeJuliano));
+    document.write("<br>");
+    document.write("<br>");
+
+    var mediaNascimento = ((ano - idadeAndre) + (ano - idadeCezar) + (ano - idadeJuliano)) / 3
+
+    document.write("Sendo assim a média das datas de nascimento deles é o ano de " + Math.round(mediaNascimento));
+</script>

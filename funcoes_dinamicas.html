@@ -1,0 +1,31 @@
+<meta charset="utf-8">
+<script>
+    function pulaLinha() {
+        document.write("<br>")
+    };
+
+    var idadeJuliano = 22;
+    var idadeCezar = 23;
+    var idadeAndre = 32;
+
+    var mediaIdades = (idadeJuliano + idadeCezar + idadeAndre) / 3;
+
+    document.write("A idade de Juliano é " + idadeJuliano + ".");
+    pulaLinha();
+    document.write("A idade de Cezar é " + idadeCezar + ".");
+    pulaLinha();
+    document.write("A idade de André é " + idadeAndre + ".");
+    pulaLinha();
+    pulaLinha();
+
+    document.write("A média de idades dos três é " + Math.round(mediaIdades) + " de idade.");
+    pulaLinha();
+    pulaLinha();
+
+    var ano = 2016;
+    var mediaNascimento = ((ano - idadeAndre) + (ano - idadeCezar) + (ano - idadeJuliano)) / 3;
+
+    document.write("André nasceu em " + (ano - idadeAndre) + ", Cezar nasceu em " + (ano - idadeCezar) + ", Juliano nasceu em " + (ano - idadeJuliano));
+    pulaLinha();
+    document.write("A média das datas de nascimento dos três é " + Math.round(mediaNascimento));
+</script>
