@@ -1,0 +1,43 @@
+<meta charset="utf-8">
+<script>
+    function pulaLinha() {
+        document.write("<br>");
+    };
+
+    function mostra(texto) {
+        document.write(texto);
+        pulaLinha();
+    };
+
+    function calculaImc(peso, altura) {
+        var imc = (peso / (altura ^ 2)).toFixed(2);
+        return imc;
+    };
+
+    // var imc = calculaImc;
+    alert("Bem vindo a calculadora de IMC");
+
+    var pessoa = prompt("Me diga o seu nome!");
+    var peso = prompt(pessoa + ", me diga o seu peso!");
+    var altura = prompt(pessoa + ", agora me gida sua altura!");
+
+    mostra("Bem vindo" + pessoa + "!");
+    mostra("Vamos agora calcular o seu IMC através das informações coletadas anteriormente.");
+    pulaLinha();
+
+    mostra("O seu peso é " + peso + "kg");
+    mostra("Sua altura é " + altura + "m");
+    pulaLinha();
+
+    mostra("Calculando...");
+    pulaLinha();
+
+    mostra("Seu IMC é " + imc);
+
+    if (imc >= 17) {
+        document.write("Você está muito abaixo do peso.");
+    } else if (imc >= 17 && imc <= 18.49) {
+        document.write("teste");
+
+    };
+</script>
