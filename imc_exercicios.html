@@ -6,16 +6,18 @@
 
     function mostra(texto) {
         document.write(texto);
+        pulaLinha();
     }
 
     function calculaImc(altura, peso) {
-        var imc = peso / (altura * altura);
-        mostra("O IMC calculado é " + imc);
+        // var imc = (peso / (altura * altura)).toFixed(2);
+        // return imc;
+        return (peso / (altura * altura)).toFixed(2);
     }
 
-    var peso = 81;
-    var altura = 1.86;
-    var imc = (peso / (altura * altura)).toFixed(2);
+    var altura = prompt("Digite uma altura!");
+    var peso = prompt("Digite um peso!");
+    var imc = calculaImc(altura, peso);
 
-    mostra("o IMC de Juliano é " + imc);
+    mostra("O IMC de Juliano é " + imc + "!");
 </script>
