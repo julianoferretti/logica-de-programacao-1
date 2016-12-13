@@ -1,5 +1,21 @@
 <meta charset="utf-8">
 <script>
-    var codigo = geraCodigo("A", 10, 30);
-    document.write(codigo); // mostrou GH1022
+    function pulaLinha() {
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+        document.write(frase);
+        pulaLinha();
+    }
+
+    function calculaImc(peso, altura) {
+        return (peso / (altura * altura)).toFixed(2);
+    }
+
+// var peso = prompt("Digite o peso: ");
+// var altura = prompt("Digite a altura: ");
+// var resultado = (calculaImc(peso,altura)).toFixed(2);
+
+    mostra("O IMC calculado é " + calculaImc(82,1.86));
 </script>
