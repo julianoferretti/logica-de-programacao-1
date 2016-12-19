@@ -1,0 +1,47 @@
+<meta charset="utf-8">
+<script>
+    function pulaLinha() {
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+        document.write(frase);
+        pulaLinha();
+    }
+
+    var vitorias = parseInt(prompt("Quantos jogos o CDC Futebol Clube venceu?"));
+    var empates = parseInt(prompt("Quantos jogos o CDC Futebol Clube empatou?"));
+    var derrotas = parseInt(prompt("Quantos jogo o CDC Futebol Clube perdeu?"));
+
+    var pontos = (vitorias * 3) + empates;
+
+    if (vitorias == 1) {
+        mostra("Com um total de " + vitorias + " vitória.");
+    } else {
+        mostra("Com um total de " + vitorias + " vitórias.");
+    }
+
+    if (empates == 1) {
+        mostra("Com um total de " + empates + " derrota.");
+    } else {
+        mostra("Com um total de " + empates + " empates.");
+    }
+
+    if (derrotas == 1) {
+        mostra("Com um total de " + derrotas + " derrota.");
+    } else {
+        mostra("Com um total de " + derrotas + " derrotas.");
+    }
+
+    mostra("O CDC Futebol Clube possui " + pontos + " pontos nesta temporada!");
+
+    // //Instrução passada pelo André para fazer a string entregar a mensagem no plural ou singular em apenas uma linha.
+    // 
+    //     var resultado = "Com um total de " + vitorias;
+    //     resultado += (vitorias == 1) ? " vitoria" : " vitorias";
+    //     resultado += ", e " + empates;
+    //     resultado += (empates == 1) ? " empate" : " empates";
+    //     resultado += ", e " + derrotas;
+    //     resultado += (derrotas == 1) ? " derrota" : " derrotas";
+    //     mostra(resultado);
+</script>
