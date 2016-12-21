@@ -32,11 +32,13 @@
     } else {
         mostra("Com um total de " + derrotas + " derrotas.");
     }
+    pulaLinha();
 
     mostra("O CDC Futebol Clube possui " + pontos + " pontos nesta temporada!");
+    pulaLinha();
 
     // //Instrução passada pelo André para fazer a string entregar a mensagem no plural ou singular em apenas uma linha.
-    // 
+    //
     //     var resultado = "Com um total de " + vitorias;
     //     resultado += (vitorias == 1) ? " vitoria" : " vitorias";
     //     resultado += ", e " + empates;
@@ -44,4 +46,13 @@
     //     resultado += ", e " + derrotas;
     //     resultado += (derrotas == 1) ? " derrota" : " derrotas";
     //     mostra(resultado);
+
+    if (pontos > 28) {
+        mostra("O time CDC Futebol Clube está a frente no campeonato!");
+    }
+    if (pontos == 28) {
+        mostra("O time CDC Futebol Clube está a empatado no campeonato!");
+    } else {
+        mostra("O time CDC Futebol Clube está a atrás no campeonato!");
+    }
 </script>
