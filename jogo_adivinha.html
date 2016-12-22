@@ -1,0 +1,35 @@
+<meta charset="utf-8">
+<script>
+    function pulaLinha() {
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+        document.write(frase);
+        pulaLinha();
+    }
+
+    var numeroHumano = parseInt(prompt("Tente adivinhar qual número será sorteado pelo computador."));
+    var numeroMaquina = Math.round(Math.random() * 5);
+
+    mostra("Muito bem vc pensou no número " + numeroHumano + ".");
+    alert("Será que vc acertou?? Vamos ver se você é o bixão mesmo!!!");
+    // mostra("O numero que o computador sorteou foi " + numeroMaquina + ".");
+    pulaLinha();
+
+    if (numeroHumano == numeroMaquina) {
+        mostra("Você acertou, o número sorteado pelo computador foi " + numeroMaquina + ".");
+    }
+    if (numeroHumano > 5) {
+        mostra("O número digitado está fora dos parâmetros aceitos pelo sistema, digite apelas números de 0 a 5.");
+    } else {
+        mostra("Você errou, o número sorteado pelo computador foi " + numeroMaquina + ".")
+        mostra('<img src="./faustop_errou.jpg">');
+        var audio = new Audio('./faustop_errou.mp3');
+        audio.play();
+    }
+
+    pulaLinha();
+    mostra("Deseja jogar novamente? Se sim, basta executart o Commant + R em seu teclado!");
+    mostra("Divirta-se ;)");
+</script>

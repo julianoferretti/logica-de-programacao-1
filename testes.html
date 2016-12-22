@@ -1,4 +1,5 @@
-<meta charset="utf-8">
+<meta charset="UTF-8">
+
 <script>
     function pulaLinha() {
         document.write("<br>");
@@ -9,13 +10,10 @@
         pulaLinha();
     }
 
-    function calculaImc(peso, altura) {
-        return (peso / (altura * altura)).toFixed(2);
-    }
+    var convidados = prompt("Número de convidados");
+    var vips = prompt("Número de convidados VIP's");
 
-// var peso = prompt("Digite o peso: ");
-// var altura = prompt("Digite a altura: ");
-// var resultado = (calculaImc(peso,altura)).toFixed(2);
+    var total = parseInt(convidados + vips);
 
-    mostra("O IMC calculado é " + calculaImc(82,1.86));
+    mostra("O total de convidados é " + total);
 </script>
