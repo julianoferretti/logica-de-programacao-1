@@ -1,0 +1,32 @@
+<meta charset="utf-8">
+<script>
+    function pulaLinha() {
+        document.write("<br>");
+    }
+
+    function frase(frase) {
+        document.write(frase);
+        pulaLinha();
+    }
+
+    function sorteia(numero) {
+        return numeroSorteado = Math.round(Math.random() * numero);
+        // return numeroSorteado;
+    }
+
+    var range = parseInt(prompt("Você quer o sorteio entre 0 e ?"));
+    var numeroSorteado = sorteia(range);
+    var aposta = parseInt(prompt("Digite um número:"));
+
+    if (aposta == numeroSorteado) {
+        frase("Acertou");
+    } else {
+        if (aposta > numeroSorteado) {
+            frase("Errou, você apostou em um número maior que o sorteado.");
+        } else {
+            frase("Errou, você apostou em um número menor que o sorteado.");
+        }
+    }
+
+    console.log(numeroSorteado);
+</script>
