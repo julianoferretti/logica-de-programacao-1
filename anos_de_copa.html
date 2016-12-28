@@ -1,0 +1,23 @@
+<meta charset="utf-8">
+<script>
+    function pulaLinha() {
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+        document.write(frase + "<br/>");
+    }
+
+    var anoCopaIni = 1930;
+    var anoCopa = anoCopaIni;
+    var perguntaData = parseInt(prompt("Digite a data que você quer verificar se haverá Copa do Mundo"));
+
+    while (anoCopa <= perguntaData) {
+        mostra("Em " + anoCopa + " houve uma Copa do Mundo.");
+        anoCopa = anoCopa + 4;
+    }
+
+    pulaLinha();
+    mostra("Segundo meus cálculos, até o ano de " + perguntaData + ",<br/>a última Compa do Mundo de Futebol foi ano de " + (anoCopa - 4) + ",<br/>sendo a primeira edição no ano de " + anoCopaIni + ".");
+    // mostra("A ultima Copa do Mundo foi no ano de " + (anoCopa - 4));
+</script>

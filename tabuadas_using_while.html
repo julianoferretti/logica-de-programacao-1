@@ -1,0 +1,26 @@
+<meta charset="utf-8">
+<script>
+    function mostra(tabuada) {
+        document.write(tabuada + "<br/>");
+    }
+
+    var multiplicador = 1,
+        numeral = 1;
+
+    while (numeral <= 10) {
+        while (multiplicador <= 10) {
+            mostra(numeral + " * " + multiplicador + " = " + (numeral * multiplicador));
+            multiplicador++;
+        }
+
+        multiplicador = 1;
+        numeral++;
+        mostra("");
+    }
+
+    // while (multiplicador <= 10) {
+    //     mostra("7 * " + multiplicador + " = " + resultado);
+    //     multiplicador = multiplicador + 1;
+    //     resultado = resultado + 7;
+    // }
+</script>
