@@ -12,7 +12,19 @@
             document.write(frase + "</br>");
         }
 
-        mostra("Hello World!");
+        var totalDeFamiliares = parseInt(prompt("Quantos familiares você tem?"));
+        var somaIdades = 0;
+
+        var numero = 1;
+        while (numero <= totalDeFamiliares) {
+            var idade = parseInt(prompt("Informa a idade."));
+            somaIdades = somaIdades + idade;
+            numero++;
+        }
+
+        var media = (somaIdades / totalDeFamiliares).toFixed(1);
+
+        mostra("A média de seus familiares é " + media + " anos de idade.");
     </script>
 </body>
 
