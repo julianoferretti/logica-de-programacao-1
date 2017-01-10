@@ -1,0 +1,30 @@
+<meta charset="utf-8">
+<script>
+    var usuario = "ferretti";
+    var senha = "fidelitas";
+
+    // var usuarioLoguin = prompt("Digite seu usuário:");
+    // var senhaLogin = prompt("Digite sua senha:");
+
+    var tentativas = 3;
+
+    while (tentativas >= 0) {
+
+        var usuarioLoguin = prompt("Digite seu usuário:");
+        var senhaLogin = prompt("Digite sua senha:");
+
+        if (usuario == usuarioLoguin && senha == senhaLogin) {
+            tentativas = -1;
+            alert("Bem vindo ao sistema, " + usuario)
+        } else {
+            alert("Dados não correspondem! Tente novamente! Você possui " + tentativas);
+        }
+        tentativas--;
+
+    }
+
+
+
+    // alert("Dados não correspondem! Tente novamente! Você possui " + tentativas);
+    // alert("Não foi possível acessar o sistema, entre em contato com o administrador do sistema!");
+</script>
