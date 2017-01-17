@@ -1,30 +1,25 @@
 <meta charset="utf-8">
 <script>
-    var usuario = "ferretti";
-    var senha = "fidelitas";
-
-    // var usuarioLoguin = prompt("Digite seu usuário:");
-    // var senhaLogin = prompt("Digite sua senha:");
-
+    var user = "ferretti";
+    var password = "fidelitas";
     var tentativas = 3;
 
-    while (tentativas >= 0) {
-
-        var usuarioLoguin = prompt("Digite seu usuário:");
-        var senhaLogin = prompt("Digite sua senha:");
-
-        if (usuario == usuarioLoguin && senha == senhaLogin) {
-            tentativas = -1;
-            alert("Bem vindo ao sistema, " + usuario)
+    function start() {
+        if (tentativas === 0) {
+            alert('Seu usuário foi bloqueado por excesso de tentativas!')
         } else {
-            alert("Dados não correspondem! Tente novamente! Você possui " + tentativas);
+            var userLogin = prompt("Digite seu usuário:");
+            var passwordLogin = prompt("Digite sua password:");
+            if (user === userLogin && password === passwordLogin) {
+                alert("Bem vindo ao sistema, " + user);
+            } else {
+                tentativas--;
+                if (tentativas > 0) {
+                    alert("Dados não correspondem! Tente novamente! Restam " + tentativas + " tentativas!!!");
+                }
+                start();
+            }
         }
-        tentativas--;
-
-    }
-
-
-
-    // alert("Dados não correspondem! Tente novamente! Você possui " + tentativas);
-    // alert("Não foi possível acessar o sistema, entre em contato com o administrador do sistema!");
+    };
+    start();
 </script>
