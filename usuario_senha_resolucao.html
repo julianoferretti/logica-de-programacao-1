@@ -10,8 +10,12 @@
         var loginInformado = prompt("Digite seu login:");
         var senhaInformado = prompt("Digite sua senha");
 
-        if (login) {
-
+        if (loginUser == loginInformado && senhaUser == senhaInformado) {
+            alert("Bem vindo ao sistema, " + loginUser);
+            break;
+        } else {
+            alert("Loguin inválido, tente novamente");
         }
+        tentavaAtual++;
     }
 </script>
