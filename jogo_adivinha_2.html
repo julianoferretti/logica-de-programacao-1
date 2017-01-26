@@ -18,14 +18,23 @@
     var numeroSorteado = sorteia(range);
     var aposta = parseInt(prompt("Digite um número:"));
 
-    if (aposta == numeroSorteado) {
-        frase("Acertou");
-    } else {
-        if (aposta > numeroSorteado) {
-            frase("Errou, você apostou em um número maior que o sorteado.");
+
+    while (tentativas === tentativasTotal) {
+
+        var tentativasTotal = 3;
+        var tentativas = 1;
+
+        if (aposta == numeroSorteado) {
+            frase("Acertou");
         } else {
-            frase("Errou, você apostou em um número menor que o sorteado.");
+            if (aposta > numeroSorteado) {
+                frase("Errou, você apostou em um número maior que o sorteado.");
+                break;
+            } else {
+                frase("Errou, você apostou em um número menor que o sorteado.");
+            }
         }
+        tentativas++;
     }
 
     console.log(numeroSorteado);
