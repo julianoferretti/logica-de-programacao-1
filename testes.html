@@ -1,28 +1,13 @@
 <meta charset="UTF-8">
 <script>
-    // var a = 1
-    //
-    // function foo() {
-    //     console.log("Pr " + a)
-    //     var a = 2
-    //     console.log("Se " + a)
-    // }
-    //
-    // foo();
-    //
-    // console.log("Te "+ a);
-
-    function foo() {
-      function bar() {
-        return 3
-      }
-
-      return bar()
-
-      function bar() {
-        return 8
-      }
+    function varBlockTest() {
+        var x = 31;
+        if (true) {
+            var x = 71; // same variable!
+            console.log(x); // 71
+        }
+        console.log(x); // 71
     }
 
-    console.log(foo())
+    varBlockTest();
 </script>
