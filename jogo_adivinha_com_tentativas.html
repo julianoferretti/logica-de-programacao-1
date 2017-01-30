@@ -1,0 +1,17 @@
+<meta charset="utf-8">
+<script>
+    var numeroPensado = Math.round(Math.random() * 5);
+    var numeroDaTentativa = 1;
+
+    while (numeroDaTentativa <= 3) {
+        var chute = parseInt(prompt("Digite seu palpite:"));
+
+        if (chute == numeroPensado) {
+            alert("Parabéns, você acertou!");
+            break;
+        } else {
+            alert("Você errou!");
+        }
+        numeroDaTentativa++;
+    }
+</script>

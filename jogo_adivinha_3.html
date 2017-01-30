@@ -4,5 +4,22 @@
         document.write(frase + "</br>");
     }
 
-    var sorteado = Math.round.(Math.random()) * 5
+    var numeroSorteado = Math.round(Math.random() * 5);
+
+    var tentativas = 1;
+
+    while (tentativas <= 3) {
+        var palpite = parseInt(prompt("Pense em um número entre 0 e 5 e digite seu palpite"));
+        if (palpite == numeroSorteado) {
+            mostra("Você ACERTOU!!! O número sorteado foi " + numeroSorteado);
+            break;
+        } else {
+            mostra("Você ERROU!!! O número sorteado foi " + numeroSorteado + " e seu palpite foi " + palpite);
+        }
+        tentativas++;
+    }
+
+    document.write("</br>");
+    mostra("FIM!!!");
+    mostra("Pressione F5 e tente novamente!")
 </script>
