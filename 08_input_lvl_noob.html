@@ -1,0 +1,30 @@
+<meta charset="utf-8">
+
+<input id="input1"/>
+<button>Compare com o meu segredo</button>
+
+<script>
+    var input = document.querySelector("#input1");
+    var body = document.querySelector('body')
+
+    var button = document.querySelector("button");
+    button.addEventListener('click', function() {
+      alert(input.value)
+    })
+
+    input.addEventListener('keyup', function(event) {
+      if(event.keyCode === 65) {
+        input.value = input.value.substring(0, input.value.length -1)
+      }
+    })
+
+    body.addEventListener('contextmenu', function(event) {
+      alert('Pau no cu de você!!')
+      event.preventDefault()
+    }, true)
+
+    window.addEventListener('scroll', function(event) {
+      alert('Pau no cu de você!!')
+      // event.preventDefault()
+    }, true)
+</script>
