@@ -28,10 +28,10 @@
             frase("Acertou");
         } else {
             if (aposta > numeroSorteado) {
-                frase("Errou, você apostou em um número maior que o sorteado.");
+                frase("Errou, você apostou em um número maior que o sorteado. <br> R: " + numeroSorteado);
                 break;
             } else {
-                frase("Errou, você apostou em um número menor que o sorteado.");
+                frase("Errou, você apostou em um número menor que o sorteado. <br> R: " + numeroSorteado);
             }
         }
         tentativas++;
